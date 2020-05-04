@@ -1,0 +1,3 @@
+humans.head(4)
+humans.describe(include=['object', 'int', 'float'])
+
