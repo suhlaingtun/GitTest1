@@ -1,0 +1,12 @@
+from sklearn import datasets
+[attr for attr in dir(datasets) if not attr.startswith('_')
+
+//Boston Housing Prices
+boston = datasets.load_boston()
+print(boston.DESCR)
+
+boston_df = pd.DataFrame(boston.data, columns=boston.feature_names)
+boston_df.head()
+
+X = boston.data
+y = boston.target

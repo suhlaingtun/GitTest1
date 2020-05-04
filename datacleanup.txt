@@ -1,0 +1,2 @@
+human_dummies = pd.get_dummies(humans)
+list(human_dummies.columns)

@@ -1,0 +1,9 @@
+from sklearn import cluster
+spectral = cluster.SpectralClustering(n_clusters=4, eigen_solver='arpack', affinity="nearest_neighbors")
+
+spectral.fit(boston.data)
+boston_df['category'] = spectral.labels_
+boston_df['price'] = boston.target
+house_clusters = boston_df.groupby('category').mean().sort_values('price')
+house_clusters.index = ['low', 'mid_low', 'mid_high', 'high']
+house_clusters[['price', 'CRIM', 'RM', 'AGE', 'DIS']]
